@@ -3,7 +3,7 @@ namespace Apredizado
     public partial class Form1 : Form
     {
         private List<Quarto> quartos = new List<Quarto>();
-        private Quarto main = new Quarto("000","Administrador");
+        private Quarto main = new Quarto("000", "Administrador");
         public Form1()
         {
             InitializeComponent();
@@ -26,22 +26,40 @@ namespace Apredizado
         private void Botao_Click(object sender, EventArgs e)
         {
             Button botaoClicado = (Button)sender;
+
             string numeroBotao = botaoClicado.Text;
 
             Quarto quarto = quartos.Find(q => q.Numero == numeroBotao);
 
             if (quarto != null)
             {
-                MessageBox.Show(quarto.Descricao, "Informações do Quarto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (quarto.Reservado == false)
+                {
+                    DialogResult result = MessageBox.Show("Deseja abrir hospedagem neste quarto ?" + "\nNum.quarto...: " + quarto.Numero + "\nAcomodações...: " + quarto.Descricao, "Janela de Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                // Cria uma nova thread para executar o segundo formulário
-                Thread thread = new Thread(AbrirSegundoFormulario);
-                thread.Start(quarto);
+                    if (result == DialogResult.Yes)
+                    {
+                        Thread thread = new Thread(AbrirSegundoFormulario);
+                        thread.Start(quarto);
+                    }
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Quarto em uso", "Visualizar Informações ?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        Thread thread = new Thread(AbrirSegundoFormulario);
+                        thread.Start(quarto);
+                    }
+                }
+
             }
             else
             {
                 MessageBox.Show("Quarto não encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

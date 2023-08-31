@@ -41,6 +41,7 @@ namespace Apredizado
             DateTime dataCheckIn = DateTime.Now;
             DateTime dataCheckOut = DateTime.Now;
             DateTime newdate = dataCheckOut.AddDays((int)dias.Value);
+            quartoAssociado.Reservado = true;
 
             Hospede hospede = new Hospede(nomeCliente, telefoneCliente, emailCliente, dataCheckIn, newdate, numeroQuarto, (int)dias.Value);
             quartoAssociado.Hospede = hospede;

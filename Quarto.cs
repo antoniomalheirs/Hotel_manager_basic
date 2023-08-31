@@ -10,12 +10,14 @@ namespace Apredizado
     {
         public string Numero { get; set; }
         public string Descricao { get; set; }
-        private Hospede Hospede { get; set; }
+        public Hospede Hospede { get; set; }
+        public bool Reservado { get; set; }
 
         public Quarto(string numero, string descricao)
         {
             Numero = numero;
             Descricao = descricao;
+            Reservado = false;
         }
 
         public List<Quarto> PreencherInformacoesQuartos()
