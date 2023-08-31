@@ -3,6 +3,7 @@ namespace Apredizado
     public partial class Form1 : Form
     {
         private List<Quarto> quartos = new List<Quarto>();
+        private List<Hospede> hospedes = new List<Hospede>();
         private Quarto main = new Quarto("000", "Administrador");
 
         private System.Windows.Forms.Timer timer;
@@ -13,26 +14,9 @@ namespace Apredizado
             quartos = main.PreencherInformacoesQuartos();
 
             timer = new System.Windows.Forms.Timer();
-            timer.Interval = 10000; // Define o intervalo em milissegundos (1 segundo neste exemplo)
+            timer.Interval = 10000;
             timer.Tick += Timer_Tick;
             timer.Start();
-        }
-
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            // Verifica o horário atual
-            DateTime horarioAtual = DateTime.Now;
-
-            // Percorre os quartos alugados e verifica se a diária acabou
-            foreach (Quarto quarto in quartos)
-            {
-                if (quarto.Reservado == true && quarto.Hospede.DataCheckOut <= DateTime.Now)
-                {
-                    MessageBox.Show($"Hospedagem quarto {quarto.Numero} terminada \nHospede {quarto.Hospede.Nome}", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    quarto.Reservado = false;
-                    quarto.Hospede = null;
-                }
-            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,12 +24,32 @@ namespace Apredizado
 
         }
 
-        private void AbrirSegundoFormulario(object quartoObj)
+        private void AbrirHospedagemFormulario(object quartoObj)
         {
             Quarto quarto = (Quarto)quartoObj;
             FormInfoQuarto formCliente = new FormInfoQuarto(quarto);
 
             formCliente.ShowDialog();
+        }
+        private void AbrirCobrarFormulario()
+        {
+            FormHospedeCobrar formCliente = new FormHospedeCobrar(hospedes);
+            formCliente.ShowDialog();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            foreach (Quarto quarto in quartos)
+            {
+                if (quarto.Reservado == true && quarto.Hospede.DataCheckOut <= DateTime.Now)
+                {
+                    hospedes.Add(quarto.Hospede);
+                    quarto.Hospede = null;
+                    quarto.Reservado = false;
+
+                    MessageBox.Show($"Hospedagem do Quarto {quarto.Numero} Terminada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         private void Botao_Click(object sender, EventArgs e)
@@ -60,11 +64,11 @@ namespace Apredizado
             {
                 if (quarto.Reservado == false)
                 {
-                    DialogResult result = MessageBox.Show("Deseja abrir hospedagem neste quarto ?" + "\nNum.quarto...: " + quarto.Numero + "\nAcomodações...: " + quarto.Descricao, "Janela de Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    DialogResult result = MessageBox.Show("Deseja abrir hospedagem ?" + "\nNum.quarto...: " + quarto.Numero + "\nAcomodações...: " + quarto.Descricao, "Janela de Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (result == DialogResult.Yes)
                     {
-                        Thread thread = new Thread(AbrirSegundoFormulario);
+                        Thread thread = new Thread(AbrirHospedagemFormulario);
                         thread.Start(quarto);
                     }
                 }
@@ -74,7 +78,7 @@ namespace Apredizado
 
                     if (result == DialogResult.Yes)
                     {
-                        Thread thread = new Thread(AbrirSegundoFormulario);
+                        Thread thread = new Thread(AbrirHospedagemFormulario);
                         thread.Start(quarto);
                     }
                 }
@@ -86,5 +90,10 @@ namespace Apredizado
             }
         }
 
+        private void button25_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(AbrirCobrarFormulario);
+            thread.Start();
+        }
     }
 }
