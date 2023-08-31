@@ -1,0 +1,17 @@
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\bin\Debug\net7.0-windows\Apredizado.exe
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\bin\Debug\net7.0-windows\Apredizado.deps.json
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\bin\Debug\net7.0-windows\Apredizado.runtimeconfig.json
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\bin\Debug\net7.0-windows\Apredizado.dll
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\bin\Debug\net7.0-windows\Apredizado.pdb
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.csproj.AssemblyReference.cache
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.Form1.resources
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.csproj.GenerateResource.cache
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.AssemblyInfoInputs.cache
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.AssemblyInfo.cs
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.csproj.CoreCompileInputs.cache
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.dll
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\refint\Apredizado.dll
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.pdb
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.genruntimeconfig.cache
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\ref\Apredizado.dll
