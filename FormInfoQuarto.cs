@@ -29,6 +29,7 @@ namespace Apredizado
                 entrada.Text = quartoAssociado.Hospede.DataCheckIn.ToString();
                 saida.Text = quartoAssociado.Hospede.DataCheckOut.ToString();
                 dias.Value = quartoAssociado.Hospede.Diashospedado;
+                
 
                 salvahospede.Enabled = false;
                 txtNome.Enabled = false;
@@ -48,12 +49,20 @@ namespace Apredizado
             DateTime dataCheckOut = DateTime.Now;
             DateTime newdate = dataCheckOut.AddDays((int)dias.Value);
             quartoAssociado.Reservado = true;
+            
+            
 
-            Hospede hospede = new Hospede(nomeCliente, telefoneCliente, emailCliente, dataCheckIn, newdate, numeroQuarto, (int)dias.Value);
+            Hospede hospede = new Hospede(nomeCliente, telefoneCliente, emailCliente, dataCheckIn, newdate, numeroQuarto, (int)dias.Value, 0);
             quartoAssociado.Hospede = hospede;
+            quartoAssociado.Hospede.Pagar = (int)dias.Value*quartoAssociado.Diaria;
 
             MessageBox.Show("Informações do cliente associadas ao quarto.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
+        }
+
+        private void FormInfoQuarto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

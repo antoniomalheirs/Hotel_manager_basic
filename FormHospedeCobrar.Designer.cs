@@ -96,7 +96,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormHospedeCobrar";
-            Text = "FormHospedeCobrar";
+            Text = "Painel de Devedores";
             Load += FormHospedeCobrar_Load;
             ResumeLayout(false);
             PerformLayout();

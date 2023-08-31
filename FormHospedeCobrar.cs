@@ -32,6 +32,7 @@ namespace Apredizado
                 node.Nodes.Add($"Telefone: {devedor.Telefone}");
                 node.Nodes.Add($"Email: {devedor.Email}");
                 node.Nodes.Add($"Dias cobrados: {devedor.Diashospedado}");
+                node.Nodes.Add($"Devendo: {devedor.Pagar}");
                 lista.Nodes.Add(node);
 
             }

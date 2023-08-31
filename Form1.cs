@@ -4,7 +4,9 @@ namespace Apredizado
     {
         private List<Quarto> quartos = new List<Quarto>();
         private List<Hospede> hospedes = new List<Hospede>();
-        private Quarto main = new Quarto("000", "Administrador");
+        private Quarto main = new Quarto("000", "Administrador",0);
+
+        private double montante = 0;
 
         private System.Windows.Forms.Timer timer;
 
@@ -64,7 +66,7 @@ namespace Apredizado
             {
                 if (quarto.Reservado == false)
                 {
-                    DialogResult result = MessageBox.Show("Deseja abrir hospedagem ?" + "\nNum.quarto...: " + quarto.Numero + "\nAcomodações...: " + quarto.Descricao, "Janela de Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    DialogResult result = MessageBox.Show("Deseja abrir hospedagem ?" + "\nNum.quarto...: " + quarto.Diaria + "\nAcomodações...: " + quarto.Descricao, "Janela de Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (result == DialogResult.Yes)
                     {

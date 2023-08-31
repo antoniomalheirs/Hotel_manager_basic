@@ -374,7 +374,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "Form1";
-            Text = "Form1";
+            Text = "Hotel Manager";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

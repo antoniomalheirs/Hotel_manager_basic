@@ -240,7 +240,8 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormInfoQuarto";
-            Text = "FormInfoQuarto";
+            Text = "Informações do Quarto";
+            Load += FormInfoQuarto_Load;
             ((System.ComponentModel.ISupportInitialize)dias).EndInit();
             ResumeLayout(false);
             PerformLayout();
