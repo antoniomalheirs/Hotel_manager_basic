@@ -44,6 +44,9 @@
             entrada = new Label();
             saida = new Label();
             label8 = new Label();
+            dias = new NumericUpDown();
+            label7 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dias).BeginInit();
             SuspendLayout();
             // 
             // numero
@@ -124,7 +127,6 @@
             label3.Size = new Size(51, 15);
             label3.TabIndex = 8;
             label3.Text = "Telefone";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -162,9 +164,9 @@
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             label6.Location = new Point(35, 347);
             label6.Name = "label6";
-            label6.Size = new Size(122, 15);
+            label6.Size = new Size(121, 15);
             label6.TabIndex = 12;
-            label6.Text = "Data & Hora de Entrada";
+            label6.Text = "Data/Hora de Entrada";
             // 
             // entrada
             // 
@@ -190,15 +192,34 @@
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             label8.Location = new Point(35, 395);
             label8.Name = "label8";
-            label8.Size = new Size(110, 15);
+            label8.Size = new Size(109, 15);
             label8.TabIndex = 14;
-            label8.Text = "Data & Hora de Saida";
+            label8.Text = "Data/Hora de Saida";
+            // 
+            // dias
+            // 
+            dias.Location = new Point(265, 370);
+            dias.Name = "dias";
+            dias.Size = new Size(120, 23);
+            dias.TabIndex = 16;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            label7.Location = new Point(250, 347);
+            label7.Name = "label7";
+            label7.Size = new Size(128, 15);
+            label7.TabIndex = 17;
+            label7.Text = "Dias a ficar Hospedado";
             // 
             // FormInfoQuarto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
+            Controls.Add(label7);
+            Controls.Add(dias);
             Controls.Add(saida);
             Controls.Add(label8);
             Controls.Add(entrada);
@@ -215,8 +236,12 @@
             Controls.Add(infoquarto);
             Controls.Add(descricao);
             Controls.Add(numero);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormInfoQuarto";
             Text = "FormInfoQuarto";
+            ((System.ComponentModel.ISupportInitialize)dias).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -239,5 +264,7 @@
         private Label entrada;
         private Label saida;
         private Label label8;
+        private NumericUpDown dias;
+        private Label label7;
     }
 }

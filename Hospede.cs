@@ -14,8 +14,9 @@ namespace Apredizado
         public DateTime DataCheckIn { get; set; }
         public DateTime DataCheckOut { get; set; }
         public string NumeroQuarto { get; set; }
+        public int Diashospedado { get; set; }
 
-        public Hospede(string nome, string telefone, string email, DateTime checkIn, DateTime checkOut, string numeroQuarto)
+        public Hospede(string nome, string telefone, string email, DateTime checkIn, DateTime checkOut, string numeroQuarto, int diashospedado)
         {
             Nome = nome;
             Telefone = telefone;
@@ -23,6 +24,7 @@ namespace Apredizado
             DataCheckIn = checkIn;
             DataCheckOut = checkOut;
             NumeroQuarto = numeroQuarto;
+            Diashospedado = diashospedado;
         }
     }
 

@@ -10,7 +10,7 @@ namespace Apredizado
     {
         public string Numero { get; set; }
         public string Descricao { get; set; }
-        public Hospede Hospede { get; set; }
+        private Hospede Hospede { get; set; }
 
         public Quarto(string numero, string descricao)
         {

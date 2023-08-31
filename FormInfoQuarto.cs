@@ -28,12 +28,8 @@ namespace Apredizado
                 txtEmail.Text = quartoAssociado.Hospede.Email;
                 entrada.Text = quartoAssociado.Hospede.DataCheckIn.ToString();
                 saida.Text = quartoAssociado.Hospede.DataCheckOut.ToString();
+                dias.Value = quartoAssociado.Hospede.Diashospedado;
             }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void salvahospede_Click(object sender, EventArgs e)
@@ -44,9 +40,9 @@ namespace Apredizado
             string numeroQuarto = quartoAssociado.Numero;
             DateTime dataCheckIn = DateTime.Now;
             DateTime dataCheckOut = DateTime.Now;
-            DateTime newdate = dataCheckOut.AddDays(2);
+            DateTime newdate = dataCheckOut.AddDays((int)dias.Value);
 
-            Hospede hospede = new Hospede(nomeCliente, telefoneCliente, emailCliente, dataCheckIn, newdate, numeroQuarto);
+            Hospede hospede = new Hospede(nomeCliente, telefoneCliente, emailCliente, dataCheckIn, newdate, numeroQuarto, (int)dias.Value);
             quartoAssociado.Hospede = hospede;
 
             MessageBox.Show("Informações do cliente associadas ao quarto.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

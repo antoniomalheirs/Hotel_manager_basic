@@ -15,10 +15,17 @@ namespace Apredizado
 
         }
 
+        private void AbrirSegundoFormulario(object quartoObj)
+        {
+            Quarto quarto = (Quarto)quartoObj;
+            FormInfoQuarto formCliente = new FormInfoQuarto(quarto);
+
+            formCliente.ShowDialog();
+        }
+
         private void Botao_Click(object sender, EventArgs e)
         {
             Button botaoClicado = (Button)sender;
-
             string numeroBotao = botaoClicado.Text;
 
             Quarto quarto = quartos.Find(q => q.Numero == numeroBotao);
@@ -26,14 +33,15 @@ namespace Apredizado
             if (quarto != null)
             {
                 MessageBox.Show(quarto.Descricao, "Informações do Quarto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FormInfoQuarto formCliente = new FormInfoQuarto(quarto);
-                formCliente.ShowDialog();
+
+                // Cria uma nova thread para executar o segundo formulário
+                Thread thread = new Thread(AbrirSegundoFormulario);
+                thread.Start(quarto);
             }
             else
             {
                 MessageBox.Show("Quarto não encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
     }
 }
