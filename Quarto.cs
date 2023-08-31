@@ -13,7 +13,6 @@ namespace Apredizado
         public double Diaria { get; set; }
         public Hospede Hospede { get; set; }
         public bool Reservado { get; set; }
-        public bool Pago { get; set; }
 
         public Quarto(string numero, string descricao, double diaria)
         {

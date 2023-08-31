@@ -46,6 +46,10 @@
             label8 = new Label();
             dias = new NumericUpDown();
             label7 = new Label();
+            label9 = new Label();
+            txtcpf = new TextBox();
+            nascimento = new DateTimePicker();
+            label10 = new Label();
             ((System.ComponentModel.ISupportInitialize)dias).BeginInit();
             SuspendLayout();
             // 
@@ -213,11 +217,51 @@
             label7.TabIndex = 17;
             label7.Text = "Dias Hospedado";
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            label9.Location = new Point(224, 169);
+            label9.Name = "label9";
+            label9.Size = new Size(28, 15);
+            label9.TabIndex = 19;
+            label9.Text = "CPF";
+            // 
+            // txtcpf
+            // 
+            txtcpf.Location = new Point(258, 161);
+            txtcpf.Name = "txtcpf";
+            txtcpf.Size = new Size(137, 23);
+            txtcpf.TabIndex = 18;
+            // 
+            // nascimento
+            // 
+            nascimento.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            nascimento.Format = DateTimePickerFormat.Short;
+            nascimento.Location = new Point(309, 190);
+            nascimento.Name = "nascimento";
+            nascimento.Size = new Size(123, 22);
+            nascimento.TabIndex = 20;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            label10.Location = new Point(224, 198);
+            label10.Name = "label10";
+            label10.Size = new Size(79, 15);
+            label10.TabIndex = 21;
+            label10.Text = "Data de Nasc.";
+            // 
             // FormInfoQuarto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
+            Controls.Add(label10);
+            Controls.Add(nascimento);
+            Controls.Add(label9);
+            Controls.Add(txtcpf);
             Controls.Add(label7);
             Controls.Add(dias);
             Controls.Add(saida);
@@ -267,5 +311,9 @@
         private Label label8;
         private NumericUpDown dias;
         private Label label7;
+        private Label label9;
+        private TextBox txtcpf;
+        private DateTimePicker nascimento;
+        private Label label10;
     }
 }

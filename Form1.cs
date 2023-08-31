@@ -66,7 +66,7 @@ namespace Apredizado
             {
                 if (quarto.Reservado == false)
                 {
-                    DialogResult result = MessageBox.Show("Deseja abrir hospedagem ?" + "\nNum.quarto...: " + quarto.Diaria + "\nAcomodações...: " + quarto.Descricao, "Janela de Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    DialogResult result = MessageBox.Show("Deseja abrir hospedagem ?" + "\nValor da Diaria...: " + quarto.Diaria + "\nAcomodações...: " + quarto.Descricao, "Janela de Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (result == DialogResult.Yes)
                     {

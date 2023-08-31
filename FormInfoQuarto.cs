@@ -29,13 +29,17 @@ namespace Apredizado
                 entrada.Text = quartoAssociado.Hospede.DataCheckIn.ToString();
                 saida.Text = quartoAssociado.Hospede.DataCheckOut.ToString();
                 dias.Value = quartoAssociado.Hospede.Diashospedado;
-                
+                txtcpf.Text = quartoAssociado.Hospede.Cpf;
+                nascimento.Text = quartoAssociado.Hospede.Nascimento.ToString();
+
 
                 salvahospede.Enabled = false;
                 txtNome.Enabled = false;
                 txtTelefone.Enabled = false;
                 txtEmail.Enabled = false;
+                txtcpf.Enabled = false;
                 dias.Enabled = false;
+                nascimento.Enabled = false;
             }
         }
 
@@ -44,17 +48,17 @@ namespace Apredizado
             string nomeCliente = txtNome.Text;
             string telefoneCliente = txtTelefone.Text;
             string emailCliente = txtEmail.Text;
+            string cpfCliente = txtcpf.Text;
             string numeroQuarto = quartoAssociado.Numero;
             DateTime dataCheckIn = DateTime.Now;
             DateTime dataCheckOut = DateTime.Now;
+            DateTime nasciment = nascimento.Value;
             DateTime newdate = dataCheckOut.AddDays((int)dias.Value);
             quartoAssociado.Reservado = true;
-            
-            
 
-            Hospede hospede = new Hospede(nomeCliente, telefoneCliente, emailCliente, dataCheckIn, newdate, numeroQuarto, (int)dias.Value, 0);
+            Hospede hospede = new Hospede(nomeCliente, telefoneCliente, emailCliente, cpfCliente, dataCheckIn, newdate, nasciment, numeroQuarto, (int)dias.Value, 0);
             quartoAssociado.Hospede = hospede;
-            quartoAssociado.Hospede.Pagar = (int)dias.Value*quartoAssociado.Diaria;
+            quartoAssociado.Hospede.Pagar = (int)dias.Value * quartoAssociado.Diaria;
 
             MessageBox.Show("Informações do cliente associadas ao quarto.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();

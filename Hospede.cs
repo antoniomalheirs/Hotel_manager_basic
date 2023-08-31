@@ -13,11 +13,14 @@ namespace Apredizado
         public string Email { get; set; }
         public DateTime DataCheckIn { get; set; }
         public DateTime DataCheckOut { get; set; }
+        public DateTime Nascimento { get; set; }
         public string NumeroQuarto { get; set; }
+        public string Cpf { get; set; }
         public int Diashospedado { get; set; }
         public double Pagar { get; set; }
 
-        public Hospede(string nome, string telefone, string email, DateTime checkIn, DateTime checkOut, string numeroQuarto, int diashospedado, double valor)
+
+        public Hospede(string nome, string telefone, string email, string cpf, DateTime checkIn, DateTime checkOut, DateTime nascimento, string numeroQuarto, int diashospedado, double valor)
         {
             Nome = nome;
             Telefone = telefone;
@@ -27,6 +30,8 @@ namespace Apredizado
             NumeroQuarto = numeroQuarto;
             Diashospedado = diashospedado;
             Pagar = valor;
+            Cpf = cpf;
+            Nascimento = nascimento;
         }
     }
 
