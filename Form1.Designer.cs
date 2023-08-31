@@ -335,6 +335,8 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(titulo);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

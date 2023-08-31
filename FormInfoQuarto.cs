@@ -29,6 +29,12 @@ namespace Apredizado
                 entrada.Text = quartoAssociado.Hospede.DataCheckIn.ToString();
                 saida.Text = quartoAssociado.Hospede.DataCheckOut.ToString();
                 dias.Value = quartoAssociado.Hospede.Diashospedado;
+
+                salvahospede.Enabled = false;
+                txtNome.Enabled = false;
+                txtTelefone.Enabled = false;
+                txtEmail.Enabled = false;
+                dias.Enabled = false;
             }
         }
 

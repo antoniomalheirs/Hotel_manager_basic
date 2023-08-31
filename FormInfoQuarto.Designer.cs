@@ -144,7 +144,7 @@
             salvahospede.Name = "salvahospede";
             salvahospede.Size = new Size(75, 23);
             salvahospede.TabIndex = 10;
-            salvahospede.Text = "SALVAR";
+            salvahospede.Text = "Hospedar";
             salvahospede.UseVisualStyleBackColor = true;
             salvahospede.Click += salvahospede_Click;
             // 
@@ -164,9 +164,9 @@
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             label6.Location = new Point(35, 347);
             label6.Name = "label6";
-            label6.Size = new Size(121, 15);
+            label6.Size = new Size(105, 15);
             label6.TabIndex = 12;
-            label6.Text = "Data/Hora de Entrada";
+            label6.Text = "Data/Hora Entrada";
             // 
             // entrada
             // 
@@ -192,9 +192,9 @@
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             label8.Location = new Point(35, 395);
             label8.Name = "label8";
-            label8.Size = new Size(109, 15);
+            label8.Size = new Size(93, 15);
             label8.TabIndex = 14;
-            label8.Text = "Data/Hora de Saida";
+            label8.Text = "Data/Hora Saida";
             // 
             // dias
             // 
@@ -209,9 +209,9 @@
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             label7.Location = new Point(250, 347);
             label7.Name = "label7";
-            label7.Size = new Size(128, 15);
+            label7.Size = new Size(93, 15);
             label7.TabIndex = 17;
-            label7.Text = "Dias a ficar Hospedado";
+            label7.Text = "Dias Hospedado";
             // 
             // FormInfoQuarto
             // 
