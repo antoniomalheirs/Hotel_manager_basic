@@ -31,6 +31,19 @@
             numero = new Label();
             descricao = new Label();
             infoquarto = new Label();
+            label1 = new Label();
+            txtNome = new TextBox();
+            txtTelefone = new TextBox();
+            txtEmail = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            salvahospede = new Button();
+            label5 = new Label();
+            label6 = new Label();
+            entrada = new Label();
+            saida = new Label();
+            label8 = new Label();
             SuspendLayout();
             // 
             // numero
@@ -61,11 +74,144 @@
             infoquarto.TabIndex = 2;
             infoquarto.Text = "Informações do Quarto";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(10, 120);
+            label1.Name = "label1";
+            label1.Size = new Size(222, 25);
+            label1.TabIndex = 3;
+            label1.Text = "Informações do Hospede";
+            // 
+            // txtNome
+            // 
+            txtNome.Location = new Point(80, 161);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(121, 23);
+            txtNome.TabIndex = 4;
+            // 
+            // txtTelefone
+            // 
+            txtTelefone.Location = new Point(80, 190);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(100, 23);
+            txtTelefone.TabIndex = 5;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(80, 219);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(137, 23);
+            txtEmail.TabIndex = 6;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            label2.Location = new Point(35, 169);
+            label2.Name = "label2";
+            label2.Size = new Size(40, 15);
+            label2.TabIndex = 7;
+            label2.Text = "Nome";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            label3.Location = new Point(24, 198);
+            label3.Name = "label3";
+            label3.Size = new Size(51, 15);
+            label3.TabIndex = 8;
+            label3.Text = "Telefone";
+            label3.Click += label3_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            label4.Location = new Point(39, 227);
+            label4.Name = "label4";
+            label4.Size = new Size(36, 15);
+            label4.TabIndex = 9;
+            label4.Text = "Email";
+            // 
+            // salvahospede
+            // 
+            salvahospede.Location = new Point(24, 260);
+            salvahospede.Name = "salvahospede";
+            salvahospede.Size = new Size(75, 23);
+            salvahospede.TabIndex = 10;
+            salvahospede.Text = "SALVAR";
+            salvahospede.UseVisualStyleBackColor = true;
+            salvahospede.Click += salvahospede_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(10, 310);
+            label5.Name = "label5";
+            label5.Size = new Size(211, 25);
+            label5.TabIndex = 11;
+            label5.Text = "Informações da Reserva";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            label6.Location = new Point(35, 347);
+            label6.Name = "label6";
+            label6.Size = new Size(122, 15);
+            label6.TabIndex = 12;
+            label6.Text = "Data & Hora de Entrada";
+            // 
+            // entrada
+            // 
+            entrada.AutoSize = true;
+            entrada.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            entrada.Location = new Point(50, 371);
+            entrada.Name = "entrada";
+            entrada.Size = new Size(0, 15);
+            entrada.TabIndex = 13;
+            // 
+            // saida
+            // 
+            saida.AutoSize = true;
+            saida.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            saida.Location = new Point(50, 419);
+            saida.Name = "saida";
+            saida.Size = new Size(0, 15);
+            saida.TabIndex = 15;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            label8.Location = new Point(35, 395);
+            label8.Name = "label8";
+            label8.Size = new Size(110, 15);
+            label8.TabIndex = 14;
+            label8.Text = "Data & Hora de Saida";
+            // 
             // FormInfoQuarto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 461);
+            Controls.Add(saida);
+            Controls.Add(label8);
+            Controls.Add(entrada);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(salvahospede);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(txtEmail);
+            Controls.Add(txtTelefone);
+            Controls.Add(txtNome);
+            Controls.Add(label1);
             Controls.Add(infoquarto);
             Controls.Add(descricao);
             Controls.Add(numero);
@@ -80,5 +226,18 @@
         private Label numero;
         private Label descricao;
         private Label infoquarto;
+        private Label label1;
+        private TextBox txtNome;
+        private TextBox txtTelefone;
+        private TextBox txtEmail;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Button salvahospede;
+        private Label label5;
+        private Label label6;
+        private Label entrada;
+        private Label saida;
+        private Label label8;
     }
 }

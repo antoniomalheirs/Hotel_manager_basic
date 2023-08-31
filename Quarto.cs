@@ -10,6 +10,7 @@ namespace Apredizado
     {
         public string Numero { get; set; }
         public string Descricao { get; set; }
+        public Hospede Hospede { get; set; }
 
         public Quarto(string numero, string descricao)
         {
@@ -47,7 +48,6 @@ namespace Apredizado
             Quartos.Add(new Quarto("122", "2 camas de solteiro, área de estar, banheiro com chuveiro."));
             Quartos.Add(new Quarto("123", "1 cama de casal, varanda com vista para a piscina."));
             Quartos.Add(new Quarto("124", "1 cama de casal, TV de tela plana, banheiro privativo."));
-
 
             return Quartos; 
         }
