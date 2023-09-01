@@ -66,7 +66,6 @@ namespace Apredizado
 
         private void FormInfoQuarto_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

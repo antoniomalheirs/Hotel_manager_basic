@@ -69,6 +69,10 @@ namespace Apredizado
                                     {
                                         if (node.Text == "Quarto "+hospede.Numero)
                                         {
+                                            Form1 formA = Application.OpenForms.OfType<Form1>().FirstOrDefault();
+                                            if (formA != null)
+                                                formA.montante += hospede.Hospede.Pagar;
+
                                             lista.Nodes.Remove(node);
                                             hospede.Reservado = false;
                                             hospede.Hospede = null;

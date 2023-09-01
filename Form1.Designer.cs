@@ -57,6 +57,8 @@
             label1 = new Label();
             label2 = new Label();
             checkout = new Button();
+            caixa = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // titulo
@@ -77,7 +79,7 @@
             button1.TabIndex = 1;
             button1.Text = "100";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += Botao_Click;
+            button1.Click += Hospeda_Click;
             // 
             // button2
             // 
@@ -87,7 +89,7 @@
             button2.TabIndex = 2;
             button2.Text = "101";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += Botao_Click;
+            button2.Click += Hospeda_Click;
             // 
             // button3
             // 
@@ -97,7 +99,7 @@
             button3.TabIndex = 4;
             button3.Text = "103";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += Botao_Click;
+            button3.Click += Hospeda_Click;
             // 
             // button4
             // 
@@ -107,7 +109,7 @@
             button4.TabIndex = 3;
             button4.Text = "102";
             button4.UseVisualStyleBackColor = true;
-            button4.Click += Botao_Click;
+            button4.Click += Hospeda_Click;
             // 
             // button5
             // 
@@ -117,7 +119,7 @@
             button5.TabIndex = 8;
             button5.Text = "107";
             button5.UseVisualStyleBackColor = true;
-            button5.Click += Botao_Click;
+            button5.Click += Hospeda_Click;
             // 
             // button6
             // 
@@ -127,7 +129,7 @@
             button6.TabIndex = 7;
             button6.Text = "106";
             button6.UseVisualStyleBackColor = true;
-            button6.Click += Botao_Click;
+            button6.Click += Hospeda_Click;
             // 
             // button7
             // 
@@ -137,7 +139,7 @@
             button7.TabIndex = 6;
             button7.Text = "105";
             button7.UseVisualStyleBackColor = true;
-            button7.Click += Botao_Click;
+            button7.Click += Hospeda_Click;
             // 
             // button8
             // 
@@ -147,7 +149,7 @@
             button8.TabIndex = 5;
             button8.Text = "104";
             button8.UseVisualStyleBackColor = true;
-            button8.Click += Botao_Click;
+            button8.Click += Hospeda_Click;
             // 
             // button9
             // 
@@ -157,7 +159,7 @@
             button9.TabIndex = 16;
             button9.Text = "115";
             button9.UseVisualStyleBackColor = true;
-            button9.Click += Botao_Click;
+            button9.Click += Hospeda_Click;
             // 
             // button10
             // 
@@ -167,7 +169,7 @@
             button10.TabIndex = 15;
             button10.Text = "114";
             button10.UseVisualStyleBackColor = true;
-            button10.Click += Botao_Click;
+            button10.Click += Hospeda_Click;
             // 
             // button11
             // 
@@ -177,7 +179,7 @@
             button11.TabIndex = 14;
             button11.Text = "113";
             button11.UseVisualStyleBackColor = true;
-            button11.Click += Botao_Click;
+            button11.Click += Hospeda_Click;
             // 
             // button12
             // 
@@ -187,7 +189,7 @@
             button12.TabIndex = 13;
             button12.Text = "112";
             button12.UseVisualStyleBackColor = true;
-            button12.Click += Botao_Click;
+            button12.Click += Hospeda_Click;
             // 
             // button13
             // 
@@ -197,7 +199,7 @@
             button13.TabIndex = 12;
             button13.Text = "111";
             button13.UseVisualStyleBackColor = true;
-            button13.Click += Botao_Click;
+            button13.Click += Hospeda_Click;
             // 
             // button14
             // 
@@ -207,7 +209,7 @@
             button14.TabIndex = 11;
             button14.Text = "110";
             button14.UseVisualStyleBackColor = true;
-            button14.Click += Botao_Click;
+            button14.Click += Hospeda_Click;
             // 
             // button15
             // 
@@ -217,7 +219,7 @@
             button15.TabIndex = 10;
             button15.Text = "109";
             button15.UseVisualStyleBackColor = true;
-            button15.Click += Botao_Click;
+            button15.Click += Hospeda_Click;
             // 
             // button16
             // 
@@ -227,7 +229,7 @@
             button16.TabIndex = 9;
             button16.Text = "108";
             button16.UseVisualStyleBackColor = true;
-            button16.Click += Botao_Click;
+            button16.Click += Hospeda_Click;
             // 
             // button17
             // 
@@ -237,7 +239,7 @@
             button17.TabIndex = 24;
             button17.Text = "123";
             button17.UseVisualStyleBackColor = true;
-            button17.Click += Botao_Click;
+            button17.Click += Hospeda_Click;
             // 
             // button18
             // 
@@ -247,7 +249,7 @@
             button18.TabIndex = 23;
             button18.Text = "122";
             button18.UseVisualStyleBackColor = true;
-            button18.Click += Botao_Click;
+            button18.Click += Hospeda_Click;
             // 
             // button19
             // 
@@ -257,7 +259,7 @@
             button19.TabIndex = 22;
             button19.Text = "121";
             button19.UseVisualStyleBackColor = true;
-            button19.Click += Botao_Click;
+            button19.Click += Hospeda_Click;
             // 
             // button20
             // 
@@ -267,7 +269,7 @@
             button20.TabIndex = 21;
             button20.Text = "120";
             button20.UseVisualStyleBackColor = true;
-            button20.Click += Botao_Click;
+            button20.Click += Hospeda_Click;
             // 
             // button21
             // 
@@ -277,7 +279,7 @@
             button21.TabIndex = 20;
             button21.Text = "119";
             button21.UseVisualStyleBackColor = true;
-            button21.Click += Botao_Click;
+            button21.Click += Hospeda_Click;
             // 
             // button22
             // 
@@ -287,7 +289,7 @@
             button22.TabIndex = 19;
             button22.Text = "118";
             button22.UseVisualStyleBackColor = true;
-            button22.Click += Botao_Click;
+            button22.Click += Hospeda_Click;
             // 
             // button23
             // 
@@ -297,7 +299,7 @@
             button23.TabIndex = 18;
             button23.Text = "117";
             button23.UseVisualStyleBackColor = true;
-            button23.Click += Botao_Click;
+            button23.Click += Hospeda_Click;
             // 
             // button24
             // 
@@ -307,7 +309,7 @@
             button24.TabIndex = 17;
             button24.Text = "116";
             button24.UseVisualStyleBackColor = true;
-            button24.Click += Botao_Click;
+            button24.Click += Hospeda_Click;
             // 
             // cobrar
             // 
@@ -347,13 +349,37 @@
             checkout.TabIndex = 28;
             checkout.Text = "Check-Out";
             checkout.UseVisualStyleBackColor = true;
-            checkout.Click += checkout_Click;
+            checkout.Click += Checkout_Click;
+            // 
+            // caixa
+            // 
+            caixa.AutoSize = true;
+            caixa.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            caixa.Location = new Point(191, 414);
+            caixa.Name = "caixa";
+            caixa.Size = new Size(16, 17);
+            caixa.TabIndex = 29;
+            caixa.Text = "0";
+            caixa.Click += caixa_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
+            label3.Location = new Point(184, 398);
+            label3.Name = "label3";
+            label3.Size = new Size(139, 17);
+            label3.TabIndex = 30;
+            label3.Text = "Valor Total do Caixa";
+            label3.Click += label3_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(334, 461);
+            ClientSize = new Size(329, 445);
+            Controls.Add(label3);
+            Controls.Add(caixa);
             Controls.Add(checkout);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -423,5 +449,7 @@
         private Label label1;
         private Label label2;
         private Button checkout;
+        private Label caixa;
+        private Label label3;
     }
 }

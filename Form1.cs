@@ -6,7 +6,7 @@ namespace Apredizado
         private List<Hospede> hospedes = new List<Hospede>();
         private Quarto main = new Quarto("000", "Administrador", 0);
 
-        private double montante = 0;
+        public double montante;
 
         private System.Windows.Forms.Timer timer;
 
@@ -33,11 +33,13 @@ namespace Apredizado
 
             formCliente.ShowDialog();
         }
+
         private void AbrirCobrarFormulario()
         {
             FormHospedeCobrar formCliente = new FormHospedeCobrar(hospedes);
             formCliente.ShowDialog();
         }
+
         private void AbrirCheckout()
         {
             FormCheckout formCliente = new FormCheckout(quartos);
@@ -57,9 +59,11 @@ namespace Apredizado
                     MessageBox.Show($"Hospedagem do Quarto {quarto.Numero} Terminada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+
+            caixa.Text = montante.ToString();
         }
 
-        private void Botao_Click(object sender, EventArgs e)
+        private void Hospeda_Click(object sender, EventArgs e)
         {
             Button botaoClicado = (Button)sender;
 
@@ -103,12 +107,20 @@ namespace Apredizado
             thread.Start();
         }
 
-        private void checkout_Click(object sender, EventArgs e)
+        private void Checkout_Click(object sender, EventArgs e)
         {
             Thread thread = new Thread(AbrirCheckout);
             thread.Start();
         }
 
- 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void caixa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
