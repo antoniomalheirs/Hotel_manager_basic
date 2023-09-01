@@ -17,3 +17,4 @@ C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windo
 C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\ref\Apredizado.dll
 C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.FormInfoQuarto.resources
 C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.FormHospedeCobrar.resources
+C:\Users\Anton\OneDrive\Área de Trabalho\game\Apredizado\obj\Debug\net7.0-windows\Apredizado.FormCheckout.resources

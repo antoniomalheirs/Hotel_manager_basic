@@ -4,7 +4,7 @@ namespace Apredizado
     {
         private List<Quarto> quartos = new List<Quarto>();
         private List<Hospede> hospedes = new List<Hospede>();
-        private Quarto main = new Quarto("000", "Administrador",0);
+        private Quarto main = new Quarto("000", "Administrador", 0);
 
         private double montante = 0;
 
@@ -36,6 +36,11 @@ namespace Apredizado
         private void AbrirCobrarFormulario()
         {
             FormHospedeCobrar formCliente = new FormHospedeCobrar(hospedes);
+            formCliente.ShowDialog();
+        }
+        private void AbrirCheckout()
+        {
+            FormCheckout formCliente = new FormCheckout(quartos);
             formCliente.ShowDialog();
         }
 
@@ -95,6 +100,12 @@ namespace Apredizado
         private void button25_Click(object sender, EventArgs e)
         {
             Thread thread = new Thread(AbrirCobrarFormulario);
+            thread.Start();
+        }
+
+        private void checkout_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(AbrirCheckout);
             thread.Start();
         }
     }

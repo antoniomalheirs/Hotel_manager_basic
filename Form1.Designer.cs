@@ -56,6 +56,7 @@
             cobrar = new Button();
             label1 = new Label();
             label2 = new Label();
+            checkout = new Button();
             SuspendLayout();
             // 
             // titulo
@@ -338,11 +339,22 @@
             label2.TabIndex = 27;
             label2.Text = "Consulta Dados";
             // 
+            // checkout
+            // 
+            checkout.Location = new Point(248, 124);
+            checkout.Name = "checkout";
+            checkout.Size = new Size(75, 23);
+            checkout.TabIndex = 28;
+            checkout.Text = "Check-Out";
+            checkout.UseVisualStyleBackColor = true;
+            checkout.Click += checkout_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(334, 461);
+            Controls.Add(checkout);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(cobrar);
@@ -410,5 +422,6 @@
         private Button cobrar;
         private Label label1;
         private Label label2;
+        private Button checkout;
     }
 }
