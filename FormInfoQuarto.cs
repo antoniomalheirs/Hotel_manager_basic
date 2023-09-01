@@ -43,7 +43,7 @@ namespace Apredizado
             }
         }
 
-        private void salvahospede_Click(object sender, EventArgs e)
+        private void Salvahospede_Click(object sender, EventArgs e)
         {
             string nomeCliente = txtNome.Text;
             string telefoneCliente = txtTelefone.Text;

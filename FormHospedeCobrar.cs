@@ -28,17 +28,17 @@ namespace Apredizado
             foreach (Hospede devedor in Devedores)
             {
                 TreeNode node = new TreeNode($"Quarto {devedor.NumeroQuarto}");
-                node.Nodes.Add($"Nome: {devedor.Nome}");
-                node.Nodes.Add($"Telefone: {devedor.Telefone}");
-                node.Nodes.Add($"Email: {devedor.Email}");
-                node.Nodes.Add($"Dias cobrados: {devedor.Diashospedado}");
-                node.Nodes.Add($"Devendo: {devedor.Pagar}");
+                node.Nodes.Add($"Nome..: {devedor.Nome}");
+                node.Nodes.Add($"Telefone..: {devedor.Telefone}");
+                node.Nodes.Add($"Nome..: {devedor.Email}");
+                node.Nodes.Add($"Nome..: {devedor.Diashospedado}");
+                node.Nodes.Add($"Nome..: {devedor.Pagar}");
                 lista.Nodes.Add(node);
 
             }
         }
 
-        private void liberadevedor_Click(object sender, EventArgs e)
+        private void Liberadevedor_Click(object sender, EventArgs e)
         {
             if (lista.SelectedNode != null && lista.SelectedNode.Parent == null)
             {

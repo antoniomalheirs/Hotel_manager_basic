@@ -135,7 +135,7 @@
             button1.TabIndex = 10;
             button1.Text = "Realizar Check-out";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += Realiza_checkout_Click;
             // 
             // label6
             // 

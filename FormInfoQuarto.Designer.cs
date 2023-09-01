@@ -150,7 +150,7 @@
             salvahospede.TabIndex = 10;
             salvahospede.Text = "Hospedar";
             salvahospede.UseVisualStyleBackColor = true;
-            salvahospede.Click += salvahospede_Click;
+            salvahospede.Click += Salvahospede_Click;
             // 
             // label5
             // 

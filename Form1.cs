@@ -97,7 +97,7 @@ namespace Apredizado
             }
         }
 
-        private void button25_Click(object sender, EventArgs e)
+        private void Confirmarpag_Click(object sender, EventArgs e)
         {
             Thread thread = new Thread(AbrirCobrarFormulario);
             thread.Start();
@@ -108,5 +108,7 @@ namespace Apredizado
             Thread thread = new Thread(AbrirCheckout);
             thread.Start();
         }
+
+ 
     }
 }

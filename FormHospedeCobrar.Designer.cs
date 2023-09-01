@@ -50,7 +50,7 @@
             liberadevedor.TabIndex = 1;
             liberadevedor.Text = "Liberar ";
             liberadevedor.UseVisualStyleBackColor = true;
-            liberadevedor.Click += liberadevedor_Click;
+            liberadevedor.Click += Liberadevedor_Click;
             // 
             // label1
             // 

@@ -317,7 +317,7 @@
             cobrar.TabIndex = 25;
             cobrar.Text = "Devedores";
             cobrar.UseVisualStyleBackColor = true;
-            cobrar.Click += button25_Click;
+            cobrar.Click += Confirmarpag_Click;
             // 
             // label1
             // 

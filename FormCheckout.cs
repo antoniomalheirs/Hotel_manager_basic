@@ -32,17 +32,17 @@ namespace Apredizado
                 if (hospede.Reservado == true)
                 {
                     TreeNode node = new TreeNode($"Quarto {hospede.Numero}");
-                    node.Nodes.Add($"Nome: {hospede.Hospede.Nome}");
-                    node.Nodes.Add($"Telefone: {hospede.Hospede.Telefone}");
-                    node.Nodes.Add($"CPF: {hospede.Hospede.Cpf}");
-                    node.Nodes.Add($"Dias cobrados: {hospede.Hospede.Diashospedado}");
-                    node.Nodes.Add($"Devendo: {hospede.Hospede.Pagar}");
+                    node.Nodes.Add($"Nome..: {hospede.Hospede.Nome}");
+                    node.Nodes.Add($"Telefone..: {hospede.Hospede.Telefone}");
+                    node.Nodes.Add($"CPF..: {hospede.Hospede.Cpf}");
+                    node.Nodes.Add($"Dias cobrados..: {hospede.Hospede.Diashospedado}");
+                    node.Nodes.Add($"Saldo a Pagar..: {hospede.Hospede.Pagar}");
                     lista.Nodes.Add(node);
                 }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Realiza_checkout_Click(object sender, EventArgs e)
         {
             string nomeCliente = txtNome.Text;
             string telefoneCliente = txtTelefone.Text;
@@ -78,7 +78,6 @@ namespace Apredizado
                                             txtCpf.Clear();
                                             MessageBox.Show("Check-Out Realizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                             goto fim;
-                                            break;
                                         }
                                     }
                                 }
