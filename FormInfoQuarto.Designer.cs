@@ -74,20 +74,20 @@
             // infoquarto
             // 
             infoquarto.AutoSize = true;
-            infoquarto.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            infoquarto.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             infoquarto.Location = new Point(10, 50);
             infoquarto.Name = "infoquarto";
-            infoquarto.Size = new Size(207, 25);
+            infoquarto.Size = new Size(221, 25);
             infoquarto.TabIndex = 2;
             infoquarto.Text = "Informações do Quarto";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label1.Location = new Point(10, 120);
             label1.Name = "label1";
-            label1.Size = new Size(222, 25);
+            label1.Size = new Size(236, 25);
             label1.TabIndex = 3;
             label1.Text = "Informações do Hospede";
             // 
@@ -155,10 +155,10 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label5.Location = new Point(10, 310);
             label5.Name = "label5";
-            label5.Size = new Size(211, 25);
+            label5.Size = new Size(224, 25);
             label5.TabIndex = 11;
             label5.Text = "Informações da Reserva";
             // 

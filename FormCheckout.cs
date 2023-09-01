@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Apredizado
 {
@@ -63,20 +65,27 @@ namespace Apredizado
                             {
                                 if (hospede.Hospede.Cpf == cpfCliente && hospede.Hospede.Pagar == double.Parse(valor) && hospede.Hospede.Nome == nomeCliente && hospede.Hospede.Telefone == telefoneCliente)
                                 {
-                                    lista.Nodes.Remove(lista.SelectedNode);
-                                    hospede.Reservado = false;
-                                    hospede.Hospede = null;
-                                    txtNome.Clear();
-                                    txtTelefone.Clear();
-                                    txtValor.Clear();
-                                    txtCpf.Clear();
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Verifique os dados, divergência de informações", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    foreach (TreeNode node in lista.Nodes)
+                                    {
+                                        if (node.Text == "Quarto "+hospede.Numero)
+                                        {
+                                            lista.Nodes.Remove(node);
+                                            hospede.Reservado = false;
+                                            hospede.Hospede = null;
+                                            txtNome.Clear();
+                                            txtTelefone.Clear();
+                                            txtValor.Clear();
+                                            txtCpf.Clear();
+                                            MessageBox.Show("Check-Out Realizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                            goto fim;
+                                            break;
+                                        }
+                                    }
                                 }
                             }
                         }
+                        MessageBox.Show("Verifique os dados, divergência de informações", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        fim:;
                     }
                 }
             }
